@@ -12,7 +12,7 @@ public class MoverArchivos {
         String rutaEnero = "G:\\Mi unidad\\FACTURAS-TRIMESTRE\\2023-2024\\1T\\Enero";
         String rutaFebrero = "G:\\Mi unidad\\FACTURAS-TRIMESTRE\\2023-2024\\1T\\Febrero";
         String rutaMarzo = "G:\\Mi unidad\\FACTURAS-TRIMESTRE\\2023-2024\\1T\\Marzo";
-
+	//Comentari nou 1
         File dirOrigen = new File(rutaOrigen);
         File[] archivos = dirOrigen.listFiles();
 
@@ -21,7 +21,7 @@ public class MoverArchivos {
                 Path origenPath = Paths.get(archivo.getAbsolutePath());
                 Path destinoPath = Paths.get(rutaEnero + "\\" + archivo.getName());
                 Files.move(origenPath, destinoPath);
-
+		//Comentari nou 2
             } else if (archivo.isFile() && archivo.getName().endsWith("02.pdf")) {
                 Path origenPath = Paths.get(archivo.getAbsolutePath());
                 Path destinoPath = Paths.get(rutaFebrero + "\\" + archivo.getName());
